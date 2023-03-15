@@ -1,0 +1,36 @@
+int single(int* nums, int numsSize)
+{
+    int v=numsSize;
+    int k[v];
+    int a;
+    for(int i=0;i<numsSize;i++)
+    {
+        a=0;
+        for(int j=0;j<numsSize;j++)
+        {
+            if(nums[i]==nums[j] && i!=j)
+            {
+                a++;
+            }
+        }
+        if(a==0)
+        {
+            return nums[i];
+        }
+    }
+    
+
+}
+int main() {
+   
+    int n;
+    scanf("%d",&n);
+    int x[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&x[i]);
+    }
+    int ans=single(x,n);
+    printf("%d ",ans);
+    
+}
